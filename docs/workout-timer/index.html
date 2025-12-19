@@ -3,95 +3,221 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Workout Timer - Legal Documents</title>
+    <title>Workout Timer: PT Edition - AI-Powered Voice Motivation</title>
+    <meta name="description" content="The only workout timer with an AI-powered Personal Trainer. Get voice motivation through every set, rep, and interval.">
+    <meta name="keywords" content="workout timer, personal trainer, voice motivation, interval training, HIIT, Tabata, EMOM, fitness app">
+    <meta property="og:title" content="Workout Timer: PT Edition">
+    <meta property="og:description" content="Voice coaching for every workout">
+    <link rel="stylesheet" href="styles.css">
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f5f5f5;
-        }
-        .container {
-            background-color: white;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-        h1 {
-            color: #4A90E2;
-            border-bottom: 3px solid #4A90E2;
-            padding-bottom: 10px;
-            margin-bottom: 30px;
-        }
-        .links {
-            margin: 40px 0;
-        }
-        .link-card {
-            background-color: #f8f9fa;
-            border: 2px solid #4A90E2;
-            border-radius: 8px;
-            padding: 30px;
-            margin: 20px 0;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .link-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-        }
-        .link-card a {
-            text-decoration: none;
-            color: #4A90E2;
-            font-size: 1.5em;
-            font-weight: bold;
-        }
-        .link-card p {
-            color: #666;
-            margin-top: 10px;
-        }
-        .footer {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #ddd;
-            color: #666;
-        }
-        .app-icon {
-            font-size: 4em;
-            margin-bottom: 20px;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.6; color: #333; background: #f5f5f7; }
+        nav { background: rgba(0,0,0,0.8); backdrop-filter: blur(20px); position: sticky; top: 0; z-index: 1000; padding: 15px 0; }
+        nav .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
+        nav .logo { color: white; font-size: 20px; font-weight: 600; text-decoration: none; }
+        nav .nav-links { display: flex; gap: 30px; list-style: none; }
+        nav .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.3s; }
+        nav .nav-links a:hover { color: white; }
+        .hero { background: linear-gradient(135deg, #4A90E2 0%, #357ABD 100%); color: white; padding: 100px 20px 80px; text-align: center; }
+        .hero h1 { font-size: 48px; font-weight: 700; margin-bottom: 20px; }
+        .hero .subtitle { font-size: 24px; margin-bottom: 15px; opacity: 0.95; }
+        .hero .tagline { font-size: 20px; margin-bottom: 40px; opacity: 0.9; }
+        .download-button { display: inline-block; background: black; color: white; padding: 15px 40px; border-radius: 10px; text-decoration: none; font-size: 18px; font-weight: 600; transition: transform 0.2s; }
+        .download-button:hover { transform: scale(1.05); }
+        .download-button::before { content: "📱 "; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        section { padding: 80px 20px; }
+        section h2 { font-size: 40px; font-weight: 700; text-align: center; margin-bottom: 20px; color: #1d1d1f; }
+        .section-subtitle { font-size: 20px; text-align: center; color: #6e6e73; margin-bottom: 60px; max-width: 800px; margin-left: auto; margin-right: auto; }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+        .feature-card { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: transform 0.3s; }
+        .feature-card:hover { transform: translateY(-5px); }
+        .feature-icon { font-size: 50px; margin-bottom: 20px; }
+        .feature-card h3 { font-size: 24px; font-weight: 600; margin-bottom: 15px; color: #1d1d1f; }
+        .feature-card p { color: #6e6e73; }
+        .timer-modes { background: white; }
+        .timer-mode { max-width: 1000px; margin: 0 auto 30px; padding: 30px; background: #f5f5f7; border-radius: 15px; }
+        .timer-mode h3 { font-size: 28px; font-weight: 700; margin-bottom: 15px; color: #4A90E2; }
+        .timer-mode p { font-size: 18px; color: #6e6e73; }
+        .highlights { background: #1d1d1f; color: white; }
+        .highlights h2 { color: white; }
+        .highlights .section-subtitle { color: rgba(255,255,255,0.7); }
+        .highlights-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; }
+        .highlight-item { text-align: center; }
+        .highlight-icon { font-size: 60px; margin-bottom: 20px; }
+        .highlight-item h3 { font-size: 20px; font-weight: 600; margin-bottom: 10px; }
+        .highlight-item p { color: rgba(255,255,255,0.7); }
+        .cta { background: linear-gradient(135deg, #4A90E2 0%, #357ABD 100%); color: white; text-align: center; padding: 80px 20px; }
+        .cta h2 { color: white; font-size: 42px; margin-bottom: 20px; }
+        .cta p { font-size: 20px; margin-bottom: 40px; opacity: 0.95; }
+        footer { background: #1d1d1f; color: rgba(255,255,255,0.7); padding: 60px 20px 30px; }
+        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px; }
+        .footer-section h4 { color: white; font-size: 18px; font-weight: 600; margin-bottom: 20px; }
+        .footer-section ul { list-style: none; }
+        .footer-section ul li { margin-bottom: 10px; }
+        .footer-section a { color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s; }
+        .footer-section a:hover { color: white; }
+        .footer-bottom { text-align: center; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 14px; }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 36px; }
+            section h2 { font-size: 32px; }
+            nav .nav-links { gap: 15px; font-size: 14px; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="app-icon">⏱️</div>
-        <h1>Workout Timer</h1>
-        <p style="font-size: 1.2em; color: #666;">Legal Documents</p>
-        
-        <div class="links">
-            <div class="link-card">
-                <a href="privacy.html">Privacy Policy</a>
-                <p>Learn about how we handle your data and protect your privacy</p>
-            </div>
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo">Workout Timer: PT Edition</a>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#modes">Modes</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>Workout Timer: PT Edition</h1>
+        <p class="subtitle">AI Voice Trainer</p>
+        <p class="tagline">Your personal trainer in your pocket. Voice motivation for every workout.</p>
+        <a href="#download" class="download-button">Download on App Store</a>
+    </section>
+
+    <section id="features">
+        <div class="container">
+            <h2>The Only Timer with a Personal Trainer</h2>
+            <p class="section-subtitle">Unlike silent timer apps, we motivate you with spoken encouragement at key moments.</p>
             
-            <div class="link-card">
-                <a href="terms.html">Terms of Service</a>
-                <p>Review the terms and conditions for using Workout Timer</p>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🗣️</div>
+                    <h3>Voice Motivation</h3>
+                    <p>Workout start motivation, progress updates, and completion celebrations throughout your workout.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚙️</div>
+                    <h3>Fully Customizable</h3>
+                    <p>Choose voice gender, encouragement level, speech rate, and pitch. Make it your own.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>5 Professional Modes</h3>
+                    <p>Simple Timer, Reps Tracker, Tabata, EMOM, and 30/10/30 protocols with voice coaching.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎵</div>
+                    <h3>Smart Audio</h3>
+                    <p>Voice intelligently timed to never conflict with countdown beeps.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💪</div>
+                    <h3>Progress Tracking</h3>
+                    <p>Visual set and rep indicators. PT announces milestones at 25%, 50%, 75%, and completion.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌙</div>
+                    <h3>Works Everywhere</h3>
+                    <p>Background audio, lock screen integration, and dark mode interface.</p>
+                </div>
             </div>
         </div>
-        
-        <div class="footer">
-            <p><strong>McNish Development</strong><br>
-            © 2025 McNish Development. All rights reserved.</p>
-            <p>Email: support@mcnish.co.uk<br>
-            Website: <a href="https://mcnish.co.uk">https://mcnish.co.uk</a></p>
-            <p style="margin-top: 20px; font-size: 0.9em;">
-                These documents are provided for transparency and compliance with<br>
-                Apple App Store requirements.
-            </p>
+    </section>
+
+    <section id="modes" class="timer-modes">
+        <div class="container">
+            <h2>5 Professional Timer Modes</h2>
+            <p class="section-subtitle">Every mode includes voice-guided motivation</p>
+            
+            <div class="timer-mode">
+                <h3>⏱️ Simple Timer</h3>
+                <p>Classic countdown with voice-motivated intervals. Perfect for timed workouts.</p>
+            </div>
+            <div class="timer-mode">
+                <h3>🏋️ Reps Timer</h3>
+                <p>Track sets and reps with voice counting. Ideal for strength training.</p>
+            </div>
+            <div class="timer-mode">
+                <h3>🔥 Tabata</h3>
+                <p>20 seconds work / 10 seconds rest with voice guidance. Perfect for HIIT.</p>
+            </div>
+            <div class="timer-mode">
+                <h3>⚡ EMOM</h3>
+                <p>Every Minute On The Minute voice prompts. Great for CrossFit workouts.</p>
+            </div>
+            <div class="timer-mode">
+                <h3>💥 30/10/30</h3>
+                <p>Extended work periods with voice coaching through longer intervals.</p>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <section class="highlights">
+        <div class="container">
+            <h2>Designed for Your Workout</h2>
+            <p class="section-subtitle">Everything you need, nothing you don't</p>
+            
+            <div class="highlights-grid">
+                <div class="highlight-item">
+                    <div class="highlight-icon">📴</div>
+                    <h3>Works Offline</h3>
+                    <p>No internet required. Train anywhere, anytime.</p>
+                </div>
+                <div class="highlight-item">
+                    <div class="highlight-icon">🔒</div>
+                    <h3>No Account</h3>
+                    <p>Download and start. No signup, no login.</p>
+                </div>
+                <div class="highlight-item">
+                    <div class="highlight-icon">🎨</div>
+                    <h3>Dark Mode</h3>
+                    <p>Easy on the eyes during workouts.</p>
+                </div>
+                <div class="highlight-item">
+                    <div class="highlight-icon">🔄</div>
+                    <h3>Background Audio</h3>
+                    <p>Continues while you use other apps.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="download" class="cta">
+        <h2>Ready to Get Motivated?</h2>
+        <p>Download Workout Timer: PT Edition today and experience the difference voice motivation makes.</p>
+        <a href="https://apps.apple.com" class="download-button">Download Free on App Store</a>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>App</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#modes">Timer Modes</a></li>
+                        <li><a href="support.html">Support & FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:support@mcnish.co.uk">support@mcnish.co.uk</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Simon McNish. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
