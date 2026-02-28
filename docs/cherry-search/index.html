@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cherry Search — One search across all the best secondhand marketplaces</title>
+    <meta name="description" content="Cherry Search searches eBay, Depop, Vinted, and Vestiaire Collective simultaneously. Find preloved fashion faster.">
+    <meta name="keywords" content="secondhand search, preloved fashion, eBay, Depop, Vinted, Vestiaire Collective, thrift, resale app">
+    <meta property="og:title" content="Cherry Search">
+    <meta property="og:description" content="One search across all the best secondhand marketplaces">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.6; color: #333; background: #f5f5f7; }
+        nav { background: rgba(0,0,0,0.8); backdrop-filter: blur(20px); position: sticky; top: 0; z-index: 1000; padding: 15px 0; }
+        nav .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
+        nav .logo { color: white; font-size: 20px; font-weight: 600; text-decoration: none; }
+        nav .nav-links { display: flex; gap: 30px; list-style: none; }
+        nav .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.3s; }
+        nav .nav-links a:hover { color: white; }
+        .hero { background: linear-gradient(135deg, #DC143C 0%, #A50E2D 100%); color: white; padding: 100px 20px 80px; text-align: center; }
+        .hero h1 { font-size: 56px; font-weight: 700; margin-bottom: 20px; }
+        .hero .subtitle { font-size: 24px; margin-bottom: 15px; opacity: 0.95; }
+        .hero .tagline { font-size: 18px; margin-bottom: 40px; opacity: 0.85; }
+        .download-button { display: inline-block; background: black; color: white; padding: 15px 40px; border-radius: 10px; text-decoration: none; font-size: 18px; font-weight: 600; transition: transform 0.2s; }
+        .download-button:hover { transform: scale(1.05); }
+        .download-button::before { content: "⬇ "; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        section { padding: 80px 20px; }
+        section h2 { font-size: 40px; font-weight: 700; text-align: center; margin-bottom: 20px; color: #1d1d1f; }
+        .section-subtitle { font-size: 20px; text-align: center; color: #6e6e73; margin-bottom: 60px; max-width: 800px; margin-left: auto; margin-right: auto; }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .feature-card { background: white; padding: 40px 30px; border-radius: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); text-align: center; transition: transform 0.3s; }
+        .feature-card:hover { transform: translateY(-5px); }
+        .feature-icon { font-size: 50px; margin-bottom: 20px; }
+        .feature-card h3 { font-size: 24px; font-weight: 600; margin-bottom: 15px; color: #1d1d1f; }
+        .feature-card p { color: #6e6e73; font-size: 16px; }
+        .platforms-section { background: white; }
+        .platforms-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px; }
+        .platform-card { background: #f5f5f7; padding: 30px; border-radius: 15px; text-align: center; }
+        .platform-name { font-size: 22px; font-weight: 700; margin-bottom: 10px; color: #1d1d1f; }
+        .platform-desc { color: #6e6e73; font-size: 15px; }
+        .platform-tag { display: inline-block; background: #DC143C; color: white; font-size: 12px; padding: 3px 10px; border-radius: 20px; margin-top: 10px; }
+        .privacy-section { background: linear-gradient(135deg, #DC143C 0%, #A50E2D 100%); color: white; padding: 80px 20px; text-align: center; }
+        .privacy-section h2 { color: white; }
+        .privacy-section p { color: rgba(255,255,255,0.9); font-size: 18px; max-width: 700px; margin: 20px auto; }
+        .privacy-points { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-top: 30px; }
+        .privacy-point { background: rgba(255,255,255,0.15); padding: 10px 20px; border-radius: 25px; font-size: 15px; }
+        footer { background: #1d1d1f; color: rgba(255,255,255,0.7); padding: 40px 20px; text-align: center; }
+        footer a { color: rgba(255,255,255,0.7); text-decoration: none; margin: 0 15px; }
+        footer a:hover { color: white; }
+        .app-store-badge { margin-top: 10px; font-size: 13px; opacity: 0.6; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo">🍒 Cherry Search</a>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#platforms">Platforms</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <h1>🍒 Cherry Search</h1>
+        <p class="subtitle">One search. Four marketplaces. Zero switching.</p>
+        <p class="tagline">Search eBay, Depop, Vinted, and Vestiaire Collective simultaneously and find the best preloved deals.</p>
+        <a href="https://apps.apple.com/gb/app/cherry-search/id6744787199" class="download-button">Download on the App Store</a>
+    </div>
+
+    <section id="features">
+        <h2>Everything you need to find the best deals</h2>
+        <p class="section-subtitle">Cherry Search combines the stock of four major secondhand marketplaces into a single, beautifully designed search experience.</p>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🔍</div>
+                <h3>Unified Search</h3>
+                <p>Search across eBay, Depop, Vinted, and Vestiaire Collective at the same time. One query, four marketplaces, instant results.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🍒</div>
+                <h3>My Picks</h3>
+                <p>Save any listing to your personal Picks wishlist with a single tap. Revisit your saved items any time — no account needed.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔖</div>
+                <h3>Saved Searches</h3>
+                <p>Save your favourite search configurations and re-run them instantly. Never miss a new listing for the items you're hunting.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💱</div>
+                <h3>Currency Conversion</h3>
+                <p>View all prices in your preferred currency with live exchange rates. Compare international listings at a glance.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <h3>Smart Filters</h3>
+                <p>Filter by price range, condition, gender category, and more. Narrow down results to find exactly what you're looking for.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🌍</div>
+                <h3>Global eBay Regions</h3>
+                <p>Choose your preferred eBay regional marketplace — UK, US, DE, FR, AU, CA, IT, or ES — to see the most relevant local listings.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="platforms" class="platforms-section">
+        <h2>Supported Marketplaces</h2>
+        <p class="section-subtitle">Cherry Search searches the platforms where the best preloved finds live.</p>
+        <div class="platforms-grid">
+            <div class="platform-card">
+                <div class="feature-icon">🏷️</div>
+                <div class="platform-name">eBay</div>
+                <div class="platform-desc">The world's largest secondhand marketplace. Millions of listings, Buy It Now and auction formats, multiple regional stores.</div>
+                <span class="platform-tag">8 regions</span>
+            </div>
+            <div class="platform-card">
+                <div class="feature-icon">👗</div>
+                <div class="platform-name">Depop</div>
+                <div class="platform-desc">The go-to app for secondhand fashion, vintage finds, and streetwear from sellers worldwide.</div>
+                <span class="platform-tag">Fashion-first</span>
+            </div>
+            <div class="platform-card">
+                <div class="feature-icon">👕</div>
+                <div class="platform-name">Vinted</div>
+                <div class="platform-desc">Europe's largest peer-to-peer clothing marketplace. Great prices, no seller fees, massive selection.</div>
+                <span class="platform-tag">Preloved clothing</span>
+            </div>
+            <div class="platform-card">
+                <div class="feature-icon">✨</div>
+                <div class="platform-name">Vestiaire Collective</div>
+                <div class="platform-desc">The leading platform for authenticated luxury and designer fashion. Premium preloved at its finest.</div>
+                <span class="platform-tag">Luxury &amp; designer</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="privacy-section">
+        <h2>Built with Privacy First</h2>
+        <p>Cherry Search doesn't collect your personal data, require an account, or use advertising. Everything you save stays on your device.</p>
+        <div class="privacy-points">
+            <span class="privacy-point">✓ No account required</span>
+            <span class="privacy-point">✓ No personal data collected</span>
+            <span class="privacy-point">✓ No advertising</span>
+            <span class="privacy-point">✓ No subscriptions</span>
+            <span class="privacy-point">✓ All data stored locally</span>
+            <span class="privacy-point">✓ Free to download</span>
+        </div>
+        <p style="margin-top: 30px;"><a href="privacy.html" style="color: white; font-weight: 600;">Read our full Privacy Policy →</a></p>
+    </div>
+
+    <footer>
+        <a href="index.html">Home</a>
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+        <p style="margin-top: 20px;">&copy; 2026 McNish Development. All rights reserved.</p>
+        <p class="app-store-badge">Apple and the Apple logo are trademarks of Apple Inc. App Store is a service mark of Apple Inc.</p>
+    </footer>
+</body>
+</html>
