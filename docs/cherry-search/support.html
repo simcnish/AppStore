@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - Cherry Search</title>
+    <meta name="description" content="Get help with Cherry Search. FAQs, troubleshooting, and contact support.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.6; color: #333; background: #f5f5f7; }
+        nav { background: rgba(0,0,0,0.8); backdrop-filter: blur(20px); position: sticky; top: 0; z-index: 1000; padding: 15px 0; }
+        nav .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
+        nav .logo { color: white; font-size: 20px; font-weight: 600; text-decoration: none; }
+        nav .nav-links { display: flex; gap: 30px; list-style: none; }
+        nav .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; }
+        nav .nav-links a:hover { color: white; }
+        .hero { background: linear-gradient(135deg, #DC143C 0%, #A50E2D 100%); color: white; padding: 80px 20px 60px; text-align: center; }
+        .hero h1 { font-size: 48px; font-weight: 700; margin-bottom: 20px; }
+        .hero p { font-size: 20px; opacity: 0.9; }
+        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+        .content { background: white; margin: 40px auto; padding: 40px; border-radius: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+        h2 { font-size: 32px; font-weight: 700; margin-top: 40px; margin-bottom: 20px; color: #1d1d1f; padding-bottom: 10px; border-bottom: 2px solid #DC143C; }
+        h3 { font-size: 24px; font-weight: 600; margin-top: 30px; margin-bottom: 15px; color: #DC143C; }
+        p { margin-bottom: 15px; color: #6e6e73; }
+        ul, ol { margin-bottom: 20px; padding-left: 30px; color: #6e6e73; }
+        li { margin-bottom: 10px; }
+        .faq-item { margin-bottom: 30px; padding: 20px; background: #f5f5f7; border-radius: 10px; border-left: 4px solid #DC143C; }
+        .faq-question { font-size: 20px; font-weight: 600; color: #1d1d1f; margin-bottom: 10px; }
+        .faq-answer { color: #6e6e73; }
+        .contact-box { background: linear-gradient(135deg, #DC143C 0%, #A50E2D 100%); color: white; padding: 30px; border-radius: 15px; text-align: center; margin: 40px 0; }
+        .contact-box h3 { color: white; margin: 0 0 15px 0; }
+        .contact-box a { color: white; text-decoration: none; font-weight: 600; font-size: 18px; }
+        .quick-links { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin: 30px 0; }
+        .quick-link { background: #f5f5f7; padding: 20px; border-radius: 10px; text-align: center; text-decoration: none; color: #1d1d1f; transition: transform 0.2s; }
+        .quick-link:hover { transform: translateY(-3px); }
+        .quick-link-icon { font-size: 40px; margin-bottom: 10px; }
+        .quick-link-title { font-weight: 600; }
+        footer { background: #1d1d1f; color: rgba(255,255,255,0.7); padding: 40px 20px; text-align: center; margin-top: 60px; }
+        footer a { color: rgba(255,255,255,0.7); text-decoration: none; margin: 0 15px; }
+        footer a:hover { color: white; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo">🍒 Cherry Search</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <h1>Support &amp; Help</h1>
+        <p>Everything you need to get the most out of Cherry Search</p>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <div class="quick-links">
+                <a href="#faq" class="quick-link">
+                    <div class="quick-link-icon">❓</div>
+                    <div class="quick-link-title">FAQs</div>
+                </a>
+                <a href="#platforms" class="quick-link">
+                    <div class="quick-link-icon">🛍️</div>
+                    <div class="quick-link-title">Platforms</div>
+                </a>
+                <a href="#troubleshooting" class="quick-link">
+                    <div class="quick-link-icon">🔧</div>
+                    <div class="quick-link-title">Troubleshooting</div>
+                </a>
+                <a href="#contact" class="quick-link">
+                    <div class="quick-link-icon">✉️</div>
+                    <div class="quick-link-title">Contact</div>
+                </a>
+            </div>
+
+            <h2 id="faq">Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">What is Cherry Search?</div>
+                <div class="faq-answer">Cherry Search lets you search across multiple secondhand fashion and lifestyle marketplaces — eBay, Depop, Vinted, and Vestiaire Collective — all at once from a single search. Compare prices, save searches, and build your wishlist without switching between apps.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Which marketplaces does Cherry Search support?</div>
+                <div class="faq-answer">Cherry Search currently supports eBay (with regional options: UK, US, DE, FR, AU, CA, IT, ES), Depop, Vinted, and Vestiaire Collective. You can enable or disable any platform from the search settings.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Do I need accounts on these marketplaces?</div>
+                <div class="faq-answer">No accounts are needed to browse and search. Cherry Search displays publicly available listings. To purchase an item, you'll be taken to the marketplace's own app or website where you can complete the transaction.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What are "My Picks"?</div>
+                <div class="faq-answer">My Picks is your personal wishlist. Tap the cherry 🍒 icon on any listing to save it to your Picks tab. Picked items are stored locally on your device — no account required. You can view them any time in the Picks carousel at the top of the home screen.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What are Saved Searches?</div>
+                <div class="faq-answer">Save any search configuration (keywords, filters, platforms) so you can re-run it with one tap. Your saved searches appear in a carousel at the top of the search screen. Tap any saved search to instantly reload those results.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How does currency conversion work?</div>
+                <div class="faq-answer">Cherry Search can display all prices in your preferred currency, fetching live exchange rates. Set your preferred currency in Settings. This is a display convenience — all purchases are processed in the marketplace's native currency.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Does the app require an internet connection?</div>
+                <div class="faq-answer">Yes, an internet connection is required to search and load listings. Your saved searches and picked items are stored locally and always accessible offline, but live search results require connectivity.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Is there a cost to use Cherry Search?</div>
+                <div class="faq-answer">Cherry Search is free to download and use. There are no subscriptions, no in-app purchases, and no advertising.</div>
+            </div>
+
+            <h2 id="platforms">Platform Guide</h2>
+
+            <h3>eBay</h3>
+            <p>eBay supports multiple regional marketplaces. Select your preferred region (UK, US, DE, FR, AU, CA, IT, ES) in Settings → eBay Region. Results include both Buy It Now and auction listings. Tap any listing to view it on eBay and buy directly.</p>
+
+            <h3>Depop</h3>
+            <p>Depop specialises in secondhand fashion, vintage clothing, and streetwear. Results show price, condition, and seller location. Tap to view the full listing on Depop.</p>
+
+            <h3>Vinted</h3>
+            <p>Vinted is a peer-to-peer marketplace for preloved clothing and accessories. Note: Vinted results may occasionally be unavailable if their platform temporarily blocks automated requests — this is a known limitation.</p>
+
+            <h3>Vestiaire Collective</h3>
+            <p>Vestiaire Collective focuses on authenticated luxury and designer fashion. Results display the seller's asking price along with condition and authentication status.</p>
+
+            <h2 id="troubleshooting">Troubleshooting</h2>
+
+            <h3>No results appearing</h3>
+            <ol>
+                <li>Check your internet connection</li>
+                <li>Ensure at least one platform is enabled in Settings</li>
+                <li>Try a more general search term</li>
+                <li>Check that price filters aren't too restrictive</li>
+                <li>Force-close and reopen the app, then search again</li>
+            </ol>
+
+            <h3>Vinted results missing</h3>
+            <ol>
+                <li>Vinted occasionally blocks automated search requests — this is outside our control</li>
+                <li>Try again after a few minutes</li>
+                <li>Other platforms will continue to show results normally</li>
+            </ol>
+
+            <h3>Images not loading</h3>
+            <ol>
+                <li>Check your internet connection speed</li>
+                <li>Try pulling down to refresh</li>
+                <li>Some marketplace images may be unavailable if the listing has expired</li>
+            </ol>
+
+            <h3>Picked items not showing</h3>
+            <ol>
+                <li>Check you're on the Picks tab (cherry 🍒 icon in the tab bar)</li>
+                <li>Picks are stored locally — they won't transfer between devices</li>
+                <li>If you've recently reinstalled the app, local data will have been cleared</li>
+            </ol>
+
+            <div class="contact-box" id="contact">
+                <h3>Still Need Help?</h3>
+                <p>Contact us at <a href="mailto:support@mcnish.co.uk">support@mcnish.co.uk</a></p>
+                <p style="margin-top: 15px; font-size: 14px; opacity: 0.9;">We typically respond within 24–48 hours</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+        <p style="margin-top: 20px;">&copy; 2026 McNish Development. All rights reserved.</p>
+    </footer>
+</body>
+</html>
